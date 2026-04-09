@@ -12,8 +12,8 @@ const App = () => {
   const messagesEndRef = useRef(null);
 
   // Updated to your Render deploy link
-  // PRODUCTION: Use your Render deployment link
-  const AGENT_API_URL = 'https://agent-pvbi.onrender.com/generate-content'; 
+  // PRODUCTION: Railway deployment
+  const AGENT_API_URL = 'https://agent-production-d5a1.up.railway.app/generate-content';
   
   // DEVELOPMENT: Uncomment the line below to test with local backend
   // const AGENT_API_URL = '/api/generate-content'; 
@@ -37,7 +37,7 @@ const App = () => {
       if (data[key]) {
         const result = extractText(data[key]);
         if (result) return result;
-      }
+      }   
     }
     
     // Fallback: check all keys recursively
