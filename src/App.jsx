@@ -4,9 +4,14 @@ import remarkGfm from 'remark-gfm';
 import './index.css';
 
 const App = () => {
-  const [messages, setMessages] = useState([
-    { id: 1, text: "Hello! I'm your Google ADK agent. How can I help you today?", sender: 'agent' }
-  ]);
+ const [messages, setMessages] = useState([
+  { 
+    id: 1, 
+    text: "Hello! I'm your Social Media Studio agent. Give me any topic, and I'll generate a deep-dive research summary, a polished LinkedIn post, and a ready-to-use Instagram script for you!", 
+    sender: 'agent' 
+  }
+]);
+
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
@@ -95,7 +100,7 @@ const App = () => {
       <header className="chat-header">
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <div className="status-dot"></div>
-          <span className="header-title">Adk Agent</span>
+          <span className="header-title"> SocialGraph ADK</span>
         </div>
         <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
           Social Media Studio
